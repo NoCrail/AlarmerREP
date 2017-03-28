@@ -1,7 +1,10 @@
 package com.nomet.app.alarmer;
 
 import android.app.AlarmManager;
+import android.app.PendingIntent;
 import android.content.Context;
+import android.content.ContextWrapper;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -32,7 +35,9 @@ public class MainActivity extends AppCompatActivity {
         cal.set(Calendar.MONTH, cur_cal.get(Calendar.MONTH));
 
         AlarmManager alarm = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
-        alarm.setExact(cal.getTimeInMillis(), intent);
+        Intent intent = new Intent(this, IntentClass.class);
+        PendingIntent pintent = PendingIntent.getService()
+        //alarm.setExact(cal.getTimeInMillis(), pintent);
         set.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
