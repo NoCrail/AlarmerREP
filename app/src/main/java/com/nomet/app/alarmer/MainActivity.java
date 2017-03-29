@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
         AlarmManager alarm = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
         Intent intent = new Intent(this, AlarmActivity.class);
-        PendingIntent pintent = PendingIntent.getService(this, 0, intent, 0);
+        final PendingIntent pintent = PendingIntent.getService(this, 0, intent, 0);
         alarm.setRepeating(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), 0, pintent);
         //alarm.setExact(cal.getTimeInMillis(), pintent);
 
@@ -44,12 +44,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 int h = time.getCurrentHour();
-
                 int m = time.getCurrentMinute();
-
-
-
-
             }
         });
     }
