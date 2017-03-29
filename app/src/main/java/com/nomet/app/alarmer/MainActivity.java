@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         Calendar cur_cal = new GregorianCalendar();
         cur_cal.setTimeInMillis(System.currentTimeMillis());
         cal.add(Calendar.DAY_OF_YEAR, cur_cal.get(Calendar.DAY_OF_YEAR));
-        cal.set(Calendar.HOUR_OF_DAY, 19);
+        cal.set(Calendar.HOUR_OF_DAY, 1);
         cal.set(Calendar.MINUTE, 22);
         cal.set(Calendar.SECOND, cur_cal.get(Calendar.SECOND));
         cal.set(Calendar.MILLISECOND, cur_cal.get(Calendar.MILLISECOND));
