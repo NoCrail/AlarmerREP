@@ -27,8 +27,8 @@ public class MainActivity extends AppCompatActivity {
         Calendar cur_cal = new GregorianCalendar();
         cur_cal.setTimeInMillis(System.currentTimeMillis());
         cal.add(Calendar.DAY_OF_YEAR, cur_cal.get(Calendar.DAY_OF_YEAR));
-        cal.set(Calendar.HOUR_OF_DAY, 16);
-        cal.set(Calendar.MINUTE, 7);
+        cal.set(Calendar.HOUR_OF_DAY, 19);
+        cal.set(Calendar.MINUTE, 22);
         cal.set(Calendar.SECOND, cur_cal.get(Calendar.SECOND));
         cal.set(Calendar.MILLISECOND, cur_cal.get(Calendar.MILLISECOND));
         cal.set(Calendar.DATE, cur_cal.get(Calendar.DATE));
@@ -36,9 +36,9 @@ public class MainActivity extends AppCompatActivity {
 
         AlarmManager alarm = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
         Intent intent = new Intent(this, AlarmActivity.class);
-        final PendingIntent pintent = PendingIntent.getService(this, 0, intent, 0);
-        alarm.setRepeating(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), 0, pintent);
-        //alarm.setExact(cal.getTimeInMillis(), pintent);
+        PendingIntent pintent = PendingIntent.getService(this, 0, intent, 0);
+        //alarm.setRepeating(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), 0, pintent);
+        alarm.setExact(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), pintent);
 
         set.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -6,4 +6,11 @@
     android:layout_height="match_parent"
     tools:context="com.nomet.app.alarmer.AlarmActivity">
 
+    <TextView
+        android:id="@+id/itwork"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Сработало"
+        tools:layout_editor_absoluteX="150dp"
+        tools:layout_editor_absoluteY="137dp" />
 </android.support.constraint.ConstraintLayout>
