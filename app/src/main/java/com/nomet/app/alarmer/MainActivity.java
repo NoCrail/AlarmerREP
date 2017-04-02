@@ -30,7 +30,8 @@ public class MainActivity extends AppCompatActivity {
         cur_cal.setTimeInMillis(System.currentTimeMillis());
         cal.add(Calendar.DAY_OF_YEAR, cur_cal.get(Calendar.DAY_OF_YEAR));
 
-        cal.set(Calendar.SECOND, cur_cal.get(Calendar.SECOND));
+        //cal.set(Calendar.SECOND, cur_cal.get(Calendar.SECOND));
+        cal.set(Calendar.SECOND, 0);
         cal.set(Calendar.MILLISECOND, cur_cal.get(Calendar.MILLISECOND));
         cal.set(Calendar.DATE, cur_cal.get(Calendar.DATE));
         cal.set(Calendar.MONTH, cur_cal.get(Calendar.MONTH));
