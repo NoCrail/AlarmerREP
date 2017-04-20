@@ -17,7 +17,7 @@ public class AlarmActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alarm);
-        ContextCompat.checkSelfPermission(this, Manifest.permission.WAKE_LOCK);
+        ContextCompat.checkSelfPermission(this, Manifest.permission.WAKE_LOCK);    //все робит на 6 андроиде
         PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
         PowerManager.WakeLock mWakeLock = pm.newWakeLock(PowerManager.SCREEN_BRIGHT_WAKE_LOCK | PowerManager.ACQUIRE_CAUSES_WAKEUP, "My Tag");
 
